@@ -57,7 +57,8 @@ export default function SubjectsGuide() {
     },
   ];
 
-  const { theme } = useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
+  const theme = themeContext?.theme || 'light';
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumbs items={[{ label: "CSS Subjects Guide" }]} />

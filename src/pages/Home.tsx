@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Layers, ArrowRight, Target, Trophy, Users, Clock, CheckCircle, AlertCircle, BookMarked, GraduationCap, FileText, Award, Brain, ShieldCheck, Globe, ChartBar, ClipboardList } from 'lucide-react';
+import { BookOpen, Layers, ArrowRight, Trophy, Users, Clock, CheckCircle, AlertCircle, BookMarked, GraduationCap, FileText, Award, Brain, ShieldCheck, Globe, ChartBar, ClipboardList } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CustomButton } from '@/components/CustomButton';
 import { CustomCard, CustomCardHeader, CustomCardTitle, CustomCardDescription, CustomCardContent } from '@/components/CustomCard';
@@ -101,7 +101,8 @@ const subjectSelectionGuide = {
 };
 
 export default function Home() {
-  const { theme } = useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
+  const theme = themeContext?.theme || 'light';
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
@@ -147,7 +148,7 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-6 justify-center"
         >
-          <Link to="/mptreparation">
+          <Link to="/mptpreparation">
             <CustomButton
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
@@ -359,7 +360,11 @@ export default function Home() {
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                English & Urdu
+                 Urdu
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                English 
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
@@ -369,10 +374,10 @@ export default function Home() {
                 <CheckCircle className="w-4 h-4 text-green-500" />
                 General Ability
               </li>
-              <li className="flex items-center gap-2">
+              {/* <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
                 Pakistan Studies & Current Affairs
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -579,8 +584,8 @@ export default function Home() {
       </motion.div>
 
 
-      <div className="text-center mb-12">
-  <h2 className="text-4xl font-bold dark:text-white mb-4">
+      {/* <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold dark:text-white mb-4">
           Start Practicing Instantly
         </h2>
         <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
@@ -588,16 +593,13 @@ export default function Home() {
           Pick a subject and get subject-specific MCQs generated in seconds for MPT preparation</p>
       </div>
 
-      {/* Quick Access */}
+      
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
         className="mb-20"
       >
-        {/* <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
-          Quick Access to Popular Subjects
-        </h2> */}
         <div className="flex flex-wrap justify-center gap-4">
           {quickAccessSubjects.map((subject, index) => (
             <Link key={subject.slug} to={`/quiz/${subject.slug}`}>
@@ -614,10 +616,11 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
+
 
       <div className="text-center mb-12">
-  <h2 className="text-4xl font-bold dark:text-white mb-4">
+        <h2 className="text-4xl font-bold dark:text-white mb-4">
           Why Choose Our CSS Prep Platform?
         </h2>
         <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
@@ -716,8 +719,8 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
               whileHover={{ y: -5 }}
               className={`text-center p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 
-                ${theme === 'dark' 
-                  ? 'bg-gradient-to-br from-purple-800 via-purple-700 to-fuchsia-900 text-white border-0' 
+                ${theme === 'dark'
+                  ? 'bg-gradient-to-br from-purple-800 via-purple-700 to-fuchsia-900 text-white border-0'
                   : 'bg-white text-slate-900 border border-slate-200'}`}
             >
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg ${theme === 'dark' ? 'bg-gradient-to-br from-purple-500 to-fuchsia-600' : 'bg-blue-100'}`}>

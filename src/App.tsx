@@ -4,7 +4,6 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 // import Compulsory from './pages/Compulsory';
-import Optional from './components/Optional';
 import Quiz from './pages/Quiz';
 import Sessions from './pages/Sessions';
 // import Settings from './pages/Settings';
@@ -33,8 +32,8 @@ function App() {
             <Navigation />
             <main className="flex-grow pt-16">
               <Routes>
-                <Route path="/" element={<Navigate to="/home" replace />} />
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Home />} />
+                {/* <Route path="/home" element={<Home />} /> */}
             
                 <Route path ='/mptpreparation' element={<MptPreparation/>} />
                 <Route path="/guide" element={<SubjectsGuide />} />

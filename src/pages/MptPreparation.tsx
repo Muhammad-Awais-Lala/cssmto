@@ -30,7 +30,7 @@ const mptSubjects = [
     subjects: [
       { name: 'Grammar', slug: 'urdu-grammar' },
       { name: 'Translation', slug: 'urdu-translation' },
-      { name: 'Vocabulary', slug: 'urdu-vocabulary' },
+      // { name: 'Vocabulary', slug: 'urdu-vocabulary' },
     ],
   },
   {
@@ -146,10 +146,11 @@ export default function MptPreparation() {
             </div>
             <ul className="list-disc pl-6 text-white/90 space-y-2 text-sm">
               <li>Islamic Studies / Ethics</li>
-              <li>English & Urdu</li>
+              <li>Urdu</li>
+              <li>English</li>
               <li>General Knowledge</li>
               <li>General Ability</li>
-              <li>Pakistan Studies & Current Affairs</li>
+              {/* <li>Pakistan Studies & Current Affairs</li> */}
             </ul>
           </div>
         </div>

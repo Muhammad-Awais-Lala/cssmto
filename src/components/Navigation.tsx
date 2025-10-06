@@ -42,7 +42,7 @@ const CustomDropdownMenu = ({ children, trigger, onClose }: { children: React.Re
 };
 
 const navItems = [
-  { path: '/home', label: 'Home', icon: Home },
+  { path: '/', label: 'Home', icon: Home },
   { path: '/mptpreparation', label: 'MPT Preparation', icon: BookOpen },
   { path: '/guide', label: 'CSS Subjects Guide', icon: Layers },
   { path: '/sessions', label: 'Sessions', icon: Clock },

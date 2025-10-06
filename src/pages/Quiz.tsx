@@ -6,6 +6,7 @@ import { CustomButton } from '@/components/CustomButton';
 import { useCustomToast } from '@/hooks/useCustomToast';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { MCQLoadingSkeleton } from '../components/LoadingSkeleton';
+import LoadingScreen from '../components/LoadingScreen';
 import ConfettiAnimation from '../components/ConfettiAnimation';
 import { CustomProgress } from '@/components/CustomProgress'; // Updated import
 import { CustomRadioGroup, CustomRadioGroupItem } from '@/components/CustomRadioGroup'; // Updated import
@@ -171,22 +172,14 @@ export default function Quiz() {
   const totalQuestions = mcqData?.questions.length ?? 15;
 
   if (loading) {
-    return (
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Breadcrumbs items={[
-          { label: 'Quiz', path: '/compulsory' },
-          { label: subjectName }
-        ]} />
-        <MCQLoadingSkeleton />
-      </div>
-    );
+    return <LoadingScreen />;
   }
 
   if (!mcqData) {
     return (
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumbs items={[
-          { label: 'Quiz', path: '/compulsory' },
+          { label: 'Quiz', path: '/mptpreparation' },
           { label: subjectName }
         ]} />
         <div className="text-center py-12">
@@ -200,6 +193,7 @@ export default function Quiz() {
             <RotateCcw className="w-4 h-4 mr-2" />
             Retry
           </CustomButton>
+        
           <CustomButton variant="outline" onClick={() => navigate(-1)}>
             <ChevronLeft className="w-4 h-4 mr-2" />
             Go Back
