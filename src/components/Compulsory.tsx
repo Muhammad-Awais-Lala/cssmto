@@ -101,7 +101,7 @@ export default function Compulsory() {
       >
 
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold dark:text-white mb-4">
             Compulsory Subjects
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>

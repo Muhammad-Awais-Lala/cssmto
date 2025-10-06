@@ -106,7 +106,7 @@ export default function MptPreparation() {
       <div className="max-w-3xl mx-auto mb-12 text-center space-y-4">
 
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold dark:text-white mb-4">
             What is MPT
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
@@ -119,16 +119,15 @@ export default function MptPreparation() {
         </div>
         <div className="grid md:grid-cols-2 gap-6 mt-6 text-left">
           {/* Criteria Card */}
-          <div className="group relative p-6 bg-gradient-to-br from-indigo-50 to-white dark:from-slate-800 dark:to-slate-900 
-                  rounded-2xl shadow-md border border-slate-200 dark:border-slate-700 
-                  hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+          <div className="group relative p-6 bg-gradient-to-br from-indigo-500 to-indigo-700 text-white dark:from-indigo-700 dark:to-indigo-900 
+                  rounded-2xl shadow-lg border-0 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-2 mb-3">
-              <div className="p-2 rounded-lg bg-indigo-100 dark:bg-indigo-900">
-                <ChartBar className="w-5 h-5 text-indigo-600 dark:text-indigo-300" />
+              <div className="p-2 rounded-lg bg-white/20">
+                <ChartBar className="w-5 h-5 text-white" />
               </div>
-              <p className="font-semibold text-slate-900 dark:text-white text-lg">Criteria</p>
+              <p className="font-semibold text-white text-lg">Criteria</p>
             </div>
-            <ul className="list-disc pl-6 text-slate-700 dark:text-slate-300 space-y-2 text-sm">
+            <ul className="list-disc pl-6 text-white/90 space-y-2 text-sm">
               <li>200 Marks (All MCQs)</li>
               <li>Qualifying Marks: 66 (33%)</li>
               <li>Duration: 200 minutes</li>
@@ -137,16 +136,15 @@ export default function MptPreparation() {
           </div>
 
           {/* Subjects Card */}
-          <div className="group relative p-6 bg-gradient-to-br from-purple-50 to-white dark:from-slate-800 dark:to-slate-900 
-                  rounded-2xl shadow-md border border-slate-200 dark:border-slate-700 
-                  hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+          <div className="group relative p-6 bg-gradient-to-br from-purple-500 to-pink-600 text-white dark:from-purple-700 dark:to-pink-900 
+                  rounded-2xl shadow-lg border-0 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-2 mb-3">
-              <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900">
-                <BookOpen className="w-5 h-5 text-purple-600 dark:text-purple-300" />
+              <div className="p-2 rounded-lg bg-white/20">
+                <BookOpen className="w-5 h-5 text-white" />
               </div>
-              <p className="font-semibold text-slate-900 dark:text-white text-lg">Subjects Covered</p>
+              <p className="font-semibold text-white text-lg">Subjects Covered</p>
             </div>
-            <ul className="list-disc pl-6 text-slate-700 dark:text-slate-300 space-y-2 text-sm">
+            <ul className="list-disc pl-6 text-white/90 space-y-2 text-sm">
               <li>Islamic Studies / Ethics</li>
               <li>English & Urdu</li>
               <li>General Knowledge</li>
@@ -174,7 +172,7 @@ export default function MptPreparation() {
 
 
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold dark:text-white mb-4">
             MPT Preparation
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
