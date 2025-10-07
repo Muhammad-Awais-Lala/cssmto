@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==========================================
+     Sitemap - Generated for your React Website
+     ========================================== -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://csspreparation.site/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://csspreparation.site/mptpreparation</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://csspreparation.site/guide</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://csspreparation.site/sessions</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Example dynamic quiz route -->
+  <url>
+    <loc>https://csspreparation.site/quiz/sample-subject</loc>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>

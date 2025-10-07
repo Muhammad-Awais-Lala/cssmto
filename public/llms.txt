@@ -1,0 +1,20 @@
+# --------------------------------------------
+# LLMs.txt - AI and Crawler Access File
+# --------------------------------------------
+User-agent: *
+Disallow:
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap reference
+Sitemap: https://csspreparation.site/sitemap.xml

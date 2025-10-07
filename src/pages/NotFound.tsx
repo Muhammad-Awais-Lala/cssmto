@@ -43,25 +43,26 @@ export default function NotFound() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="space-y-4"
+          className="flex flex-col sm:flex-row gap-4 items-center justify-center"
         >
-          <Link to="/home">
-            <CustomButton // Changed to CustomButton
-              size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+          <Link to="/" className="w-full sm:w-auto">
+            <CustomButton
+              size="lg"
+              className="w-full sm:w-48 bg-blue-600 hover:bg-blue-700 text-white"
             >
               <Home className="w-5 h-5 mr-2" />
               Go to Home
             </CustomButton>
           </Link>
-          
-          <div>
-            <CustomButton // Changed to CustomButton
-              variant="outline" 
+
+          <div className="w-full sm:w-auto">
+            <CustomButton
+              size="lg"
+              variant="outline"
               onClick={() => window.history.back()}
-              className="ml-4"
+              className="w-full sm:w-48"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </CustomButton>
           </div>
@@ -73,14 +74,14 @@ export default function NotFound() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="mt-12 text-sm text-slate-500 dark:text-slate-400"
         >
-          <p>Need help? Try exploring our subjects:</p>
+          <p>Need help? </p>
           <div className="flex flex-wrap justify-center gap-2 mt-3">
-            <Link to="/compulsory" className="text-blue-600 hover:text-blue-700 underline">
-              Compulsory Subjects
+            <Link to="/mptpreparation" className="text-blue-600 hover:text-blue-700 underline">
+              MPT Preparation
             </Link>
             <span>•</span>
-            <Link to="/optional" className="text-blue-600 hover:text-blue-700 underline">
-              Optional Subjects
+            <Link to="/guide" className="text-blue-600 hover:text-blue-700 underline">
+              Css Subjects Guide
             </Link>
             <span>•</span>
             <Link to="/sessions" className="text-blue-600 hover:text-blue-700 underline">

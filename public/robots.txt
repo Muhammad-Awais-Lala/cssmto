@@ -1,0 +1,8 @@
+# --------------------------------------------
+# Robots.txt - SEO Crawler Directives
+# --------------------------------------------
+User-agent: *
+Allow: /
+
+# Sitemap reference
+Sitemap: https://csspreparation.site/sitemap.xml
