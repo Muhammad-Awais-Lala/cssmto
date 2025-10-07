@@ -1,5 +1,5 @@
 
-import React, { useContext, ReactNode } from 'react';
+import { useContext, ReactNode } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 
 // Accessible visually hidden text utility

@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* Prevent browsers from auto-inverting colors or applying forced dark styles.
+   - forced-color-adjust: none prevents some browsers from auto-adjusting colors.
+   - forced-colors (Windows high contrast) can't be fully controlled, but we opt-out where possible.
+   - We advertise the color-scheme based on the app theme (data-theme / .dark) so UA styles don't override.
+   These rules do not change existing variables, class names, or app functionality.
+*/
+:root, html, body {
+  /* Opt out of automatic forced-color adjustments where supported */
+  forced-color-adjust: none;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Tie UA color-scheme to our ThemeContext-driven attributes.
+   When ThemeProvider sets document.documentElement.dataset.theme = 'dark',
+   and toggles the .dark class, the browser will see the correct color-scheme.
+*/
+:root {
+  color-scheme: light;
+}
+:root[data-theme='dark'], .dark {
+  color-scheme: dark;
+}
+
 /* Apply theme variables to body so Tailwind tokens resolve visually */
 html, body, #root {
   background-color: var(--color-bg);

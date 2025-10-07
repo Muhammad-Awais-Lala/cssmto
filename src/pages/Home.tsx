@@ -7,14 +7,7 @@ import { CustomTabs, CustomTabsList, CustomTabsTrigger, CustomTabsContent } from
 import { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 
-const quickAccessSubjects = [
-  { name: 'English', slug: 'english', color: 'bg-teal-600' },
-  { name: 'General Abilities', slug: 'general-abilities', color: 'bg-purple-600' },
-  { name: 'General Knowledge', slug: 'general-knowledge', color: 'bg-indigo-600' },
-  { name: 'Current Affairs', slug: 'current-affairs', color: 'bg-green-600' },
-  { name: 'Pakistan Affairs', slug: 'pakistan-affairs', color: 'bg-fuchsia-600' },
-  // { name: 'Islamic Studies', slug: 'islamic-studies', color: 'bg-emerald-600' },
-];
+// quick access subjects intentionally removed to avoid unused variable warning
 
 
 const features = [

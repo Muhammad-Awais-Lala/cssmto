@@ -5,7 +5,6 @@ import { ChevronLeft, RotateCcw, CheckCircle, XCircle, Circle, Eye } from 'lucid
 import { CustomButton } from '@/components/CustomButton';
 import { useCustomToast } from '@/hooks/useCustomToast';
 import Breadcrumbs from '../components/Breadcrumbs';
-import { MCQLoadingSkeleton } from '../components/LoadingSkeleton';
 import LoadingScreen from '../components/LoadingScreen';
 import ConfettiAnimation from '../components/ConfettiAnimation';
 import { CustomProgress } from '@/components/CustomProgress'; // Updated import
