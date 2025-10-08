@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Sun, Moon, Trash2, Shield, Info, User, ExternalLink } from 'lucide-react';
+import { Trash2, Shield, Info, User, ExternalLink } from 'lucide-react';
 import { CustomButton } from '@/components/CustomButton';
 import { useCustomToast } from '@/hooks/useCustomToast';
 import Breadcrumbs from '../components/Breadcrumbs';
-import { useTheme } from '../contexts/ThemeContext';
 import { CustomCard, CustomCardHeader, CustomCardTitle, CustomCardDescription, CustomCardContent } from '@/components/CustomCard';
 import { CustomAlertDialog, CustomAlertDialogTrigger, CustomAlertDialogContent, CustomAlertDialogHeader, CustomAlertDialogTitle, CustomAlertDialogDescription, CustomAlertDialogFooter, CustomAlertDialogAction, CustomAlertDialogCancel } from '@/components/CustomAlertDialog';
 import { CustomInput, CustomLabel } from '@/components/CustomForm'; // Updated import
 
 export default function Settings() {
-  const { theme, setTheme } = useTheme();
   const { toast } = useCustomToast();
   const [resetText, setResetText] = useState('');
   const [showClearHistoryDialog, setShowClearHistoryDialog] = useState(false);
@@ -32,10 +30,7 @@ export default function Settings() {
     }
   };
 
-  const themeOptions = [
-    { value: 'light', label: 'Light', icon: Sun },
-    { value: 'dark', label: 'Dark', icon: Moon },
-  ];
+  
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -56,36 +51,7 @@ export default function Settings() {
         </div>
 
         <div className="space-y-6">
-          {/* Theme Settings */}
-          <CustomCard>
-            <CustomCardHeader>
-              <CustomCardTitle className="flex items-center space-x-2">
-                <Sun className="w-5 h-5" />
-                <span>Appearance</span>
-              </CustomCardTitle>
-              <CustomCardDescription>
-                Choose your preferred theme for the application
-              </CustomCardDescription>
-            </CustomCardHeader>
-            <CustomCardContent>
-              <div className="grid grid-cols-2 gap-4">
-                {themeOptions.map((option) => {
-                  const Icon = option.icon;
-                  return (
-                    <CustomButton
-                      key={option.value}
-                      variant={theme === option.value ? "default" : "outline"}
-                      className="h-20 flex flex-col items-center justify-center space-y-2"
-                      onClick={() => setTheme(option.value as any)}
-                    >
-                      <Icon className="w-5 h-5" />
-                      <span>{option.label}</span>
-                    </CustomButton>
-                  );
-                })}
-              </div>
-            </CustomCardContent>
-          </CustomCard>
+          
 
           {/* Data Management */}
           <CustomCard>
@@ -99,7 +65,7 @@ export default function Settings() {
               </CustomCardDescription>
             </CustomCardHeader>
             <CustomCardContent className="space-y-4">
-              <div className="flex items-center justify-between p-4 bg-surface rounded-lg border border-slate-200 dark:border-slate-700">
+              <div className="flex items-center justify-between p-4 bg-surface rounded-lg border border-slate-200">
                 <div>
                   <h3 className="font-medium text-text-primary">Clear Quiz History</h3>
                   <p className="text-sm text-text-muted">
@@ -230,7 +196,7 @@ export default function Settings() {
             </CustomCardHeader>
             <CustomCardContent>
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-surface rounded-lg border border-slate-200 dark:border-slate-700">
+                <div className="flex items-center justify-between p-4 bg-surface rounded-lg border border-slate-200">
                   <div>
                     <h3 className="font-medium text-text-primary">Muhammad Ahmad</h3>
                     <p className="text-sm text-text-muted">AI Engineer</p>

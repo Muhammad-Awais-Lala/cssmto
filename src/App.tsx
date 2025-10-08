@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ThemeProvider } from './contexts/ThemeContext';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 // import Compulsory from './pages/Compulsory';
@@ -26,7 +25,6 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
         <Router>
           <div className="min-h-screen bg-background text-text-primary transition-colors duration-300 flex flex-col">
             <Navigation />
@@ -47,7 +45,6 @@ function App() {
             <Footer />
           </div>
         </Router>
-      </ThemeProvider>
     </QueryClientProvider>
   );
 }

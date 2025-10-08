@@ -1,11 +1,6 @@
 @import "tailwindcss";
 
-/* Prevent browsers from auto-inverting colors or applying forced dark styles.
-   - forced-color-adjust: none prevents some browsers from auto-adjusting colors.
-   - forced-colors (Windows high contrast) can't be fully controlled, but we opt-out where possible.
-   - We advertise the color-scheme based on the app theme (data-theme / .dark) so UA styles don't override.
-   These rules do not change existing variables, class names, or app functionality.
-*/
+/* Prevent browsers from auto-inverting colors or applying forced dark styles. */
 :root, html, body {
   /* Opt out of automatic forced-color adjustments where supported */
   forced-color-adjust: none;
@@ -13,16 +8,8 @@
   print-color-adjust: exact;
 }
 
-/* Tie UA color-scheme to our ThemeContext-driven attributes.
-   When ThemeProvider sets document.documentElement.dataset.theme = 'dark',
-   and toggles the .dark class, the browser will see the correct color-scheme.
-*/
-:root {
-  color-scheme: light;
-}
-:root[data-theme='dark'], .dark {
-  color-scheme: dark;
-}
+/* Light-only color scheme */
+:root { color-scheme: light; }
 
 /* Apply theme variables to body so Tailwind tokens resolve visually */
 html, body, #root {
@@ -30,7 +17,6 @@ html, body, #root {
   color: var(--text-primary);
 }
 
-/* Define CSS variables for theme colors */
 :root {
   --color-bg: #ffffff; /* Light mode background */
   --color-surface: #f8fafc; /* Light mode surface */
@@ -42,17 +28,4 @@ html, body, #root {
   --color-success: #22c55e; /* Green-500 */
   --text-primary: #1e293b; /* Slate-900 */
   --text-muted: #64748b; /* Slate-500 */
-}
-
-.dark {
-  --color-bg: #0f172a; /* Dark mode background (slate-900) */
-  --color-surface: #1e293b; /* Dark mode surface (slate-800) */
-  --color-primary: #60a5fa; /* Blue-400 */
-  --color-primary-600: #3b82f6; /* Blue-500 */
-  --color-accent: #334155; /* Slate-700 */
-  --color-muted: #94a3b8; /* Slate-400 */
-  --color-danger: #ef4444; /* Red-500 */
-  --color-success: #22c55e; /* Green-500 */
-  --text-primary: #f8fafc; /* Slate-50 */
-  --text-muted: #94a3b8; /* Slate-400 */
 }

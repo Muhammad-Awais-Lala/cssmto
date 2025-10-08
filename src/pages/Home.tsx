@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { CustomButton } from '@/components/CustomButton';
 import { CustomCard, CustomCardHeader, CustomCardTitle, CustomCardDescription, CustomCardContent } from '@/components/CustomCard';
 import { CustomTabs, CustomTabsList, CustomTabsTrigger, CustomTabsContent } from '@/components/CustomTabs'; // Updated import
-import { useContext } from 'react';
-import { ThemeContext } from '../contexts/ThemeContext';
+// theme context removed
 
 // quick access subjects intentionally removed to avoid unused variable warning
 
@@ -94,8 +93,6 @@ const subjectSelectionGuide = {
 };
 
 export default function Home() {
-  const themeContext = useContext(ThemeContext);
-  const theme = themeContext?.theme || 'light';
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
@@ -183,7 +180,7 @@ export default function Home() {
             />
             <div className="relative z-10 flex h-full flex-col">
               <BookOpen className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300" />
-              <h2 className="text-3xl font-bold mb-4 dark:text-white">MPT Preparation</h2>
+              <h2 className="text-3xl font-bold mb-4">MPT Preparation</h2>
               <p className="text-blue-100 mb-6 text-lg">
                 Start your <span className="font-semibold">MPT Preparation</span> with Pakistan-focused MCQs
                 and boost your chances to qualify for the CSS exam.
@@ -210,7 +207,7 @@ export default function Home() {
             />
             <div className="relative z-10 flex h-full flex-col">
               <Layers className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300" />
-              <h2 className="text-3xl font-bold mb-4 dark:text-white">CSS Subjects Guide</h2>
+              <h2 className="text-3xl font-bold mb-4">CSS Subjects Guide</h2>
               <p className="text-purple-100 mb-6 text-lg">
                 Explore compulsory and optional subjects with detailed marks distribution and guidance
                 for effective CSS exam preparation.
@@ -229,7 +226,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* --- WHAT IS CSS --- */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold dark:text-white mb-4">
+          <h2 className="text-4xl font-bold mb-4">
             What is CSS ?
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
@@ -243,12 +240,10 @@ export default function Home() {
         >
 
 
-          <div className="prose max-w-none text-slate-700 dark:text-slate-300 mb-6">
+          <div className="prose max-w-none text-slate-700 mb-6">
 
             {/* Parent Card with Sub Sections */}
-            <div className={`mt-4 p-6 rounded-2xl shadow-sm space-y-6 
-              ${theme === 'dark' ? 'bg-gradient-to-br from-indigo-800 to-purple-900 text-white border-0' : 'bg-white border border-slate-200 text-slate-700'}`}
-            >
+            <div className="mt-4 p-6 rounded-2xl shadow-sm space-y-6 bg-white border border-slate-200 text-slate-700">
               <p>
                 The <strong>Central Superior Services (CSS)</strong> Exam is conducted by the
                 Federal Public Service Commission (FPSC) for recruitment to posts at BPS-17.
@@ -258,11 +253,11 @@ export default function Home() {
 
               {/* Exam Components */}
               <div>
-                <h3 className={`text-sm font-medium mb-2 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-slate-800'}`}>
+                <h3 className="text-sm font-medium mb-2 flex items-center gap-2 text-slate-800">
                   <ClipboardList className="w-4 h-4 text-indigo-500" />
                   Exam Components
                 </h3>
-                <ul className={`list-disc pl-5 text-sm space-y-1 ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+                <ul className="list-disc pl-5 text-sm space-y-1 text-slate-600">
                   <li>Written Test — 1200 marks</li>
                   <li>Medical Test</li>
                   <li>Psychological Test</li>
@@ -272,11 +267,11 @@ export default function Home() {
 
               {/* Subjects Overview */}
               <div>
-                <h3 className={`text-sm font-medium mb-2 flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-slate-800'}`}>
+                <h3 className="text-sm font-medium mb-2 flex items-center gap-2 text-slate-800">
                   <BookOpen className="w-4 h-4 text-indigo-500" />
                   Subjects Overview
                 </h3>
-                <ul className={`list-disc pl-5 text-sm space-y-1 ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+                <ul className="list-disc pl-5 text-sm space-y-1 text-slate-600">
                   <li>Compulsory Subjects — 600 marks</li>
                   <li>Optional Subjects — 600 marks (choose from groups)</li>
                 </ul>
@@ -290,7 +285,7 @@ export default function Home() {
         {/* Header */}
 
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold dark:text-white mb-4">
+          <h2 className="text-4xl font-bold mb-4">
             What is MPT (MCQ Preliminary Test)?
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
@@ -300,19 +295,18 @@ export default function Home() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className={`max-w-7xl mx-auto rounded-2xl shadow-md p-8 space-y-10 
-            ${theme === 'dark' ? 'bg-gradient-to-br from-indigo-800 to-purple-900 text-white border-0' : 'bg-white border border-slate-200 text-slate-700'}`}
+          className="max-w-7xl mx-auto rounded-2xl shadow-md p-8 space-y-10 bg-white border border-slate-200 text-slate-700"
         >
 
           {/* Section 1: About MPT */}
           <div className="space-y-4">
-            <p className={`text-sm md:text-base ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+            <p className="text-sm md:text-base text-slate-600">
               The <strong>MPT</strong> is a screening MCQ test introduced by FPSC in 2022.
               It shortlists candidates for the CSS written exam and checks baseline knowledge across
               core areas.
             </p>
 
-            <ul className={`space-y-2 text-sm md:text-base ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-700'}`}>
+            <ul className="space-y-2 text-sm md:text-base text-slate-700">
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-orange-500" />
                 <span>
@@ -342,11 +336,11 @@ export default function Home() {
 
           {/* Section 2: Subjects */}
           <div className="space-y-3">
-            <h3 className={`flex items-center gap-2 text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-slate-800'}`}>
+            <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-800">
               <Globe className="w-5 h-5 text-purple-500" />
               Subjects Covered in MPT
             </h3>
-            <ul className={`grid sm:grid-cols-2 gap-2 text-sm md:text-base ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+            <ul className="grid sm:grid-cols-2 gap-2 text-sm md:text-base text-slate-600">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
                 Islamic Studies / Ethics
@@ -376,16 +370,16 @@ export default function Home() {
 
           {/* Section 3: Why Important */}
           <div className="space-y-3">
-            <h3 className={`flex items-center gap-2 text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-slate-800'}`}>
+            <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-800">
               <ShieldCheck className="w-5 h-5 text-emerald-500" />
               Why MPT Matters
             </h3>
-            <p className={`text-sm md:text-base ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-700'}`}>
+            <p className="text-sm md:text-base text-slate-700">
               MPT is the screening gate — without clearing it, a candidate cannot
               appear for the CSS written exam. It ensures only serious and prepared
               candidates move forward.
             </p>
-            <ul className={`space-y-2 text-sm md:text-base ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+            <ul className="space-y-2 text-sm md:text-base text-slate-600">
               <li className="flex items-start gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
                 Shortlists candidates for the written stage
@@ -414,11 +408,11 @@ export default function Home() {
         className="mb-20"
       >
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold dark:text-white mb-4">
+          <h2 className="text-4xl font-bold mb-4">
             Complete CSS Exam Guide
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Everything you need to know about the CSS examination process, eligibility, and preparation strategy
           </p>
         </div>
@@ -453,17 +447,17 @@ export default function Home() {
                     <CustomCard className="h-full hover:shadow-lg transition-all duration-300">
                       <CustomCardHeader>
                         <div className="flex items-center space-x-3 mb-2">
-                          <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                          <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
                             <Icon className="w-5 h-5 text-blue-600" />
                           </div>
-                          <span className="text-sm font-semibold text-blue-600 bg-blue-100 dark:bg-blue-900/30 px-3 py-1 rounded-full">
+                          <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
                             Step {step.step}
                           </span>
                         </div>
                         <CustomCardTitle className="text-lg">{step.title}</CustomCardTitle>
                       </CustomCardHeader>
                       <CustomCardContent>
-                        <p className="text-slate-600 dark:text-slate-400">{step.description}</p>
+                        <p className="text-slate-600">{step.description}</p>
                       </CustomCardContent>
                     </CustomCard>
                   </motion.div>
@@ -613,11 +607,11 @@ export default function Home() {
 
 
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold dark:text-white mb-4">
+        <h2 className="text-4xl font-bold  mb-4">
           Why Choose Our CSS Prep Platform?
         </h2>
         <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-        <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+        <p className="text-xl text-slate-600  max-w-3xl mx-auto">
           A complete preparation hub with subject guidance, smart quizzes, and detailed progress tracking
           designed to make your CSS journey structured and stress-free.</p>
       </div>
@@ -711,18 +705,15 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
               whileHover={{ y: -5 }}
-              className={`text-center p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 
-                ${theme === 'dark'
-                  ? 'bg-gradient-to-br from-purple-800 via-purple-700 to-fuchsia-900 text-white border-0'
-                  : 'bg-white text-slate-900 border border-slate-200'}`}
+              className="text-center p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white text-slate-900 border border-slate-200"
             >
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg ${theme === 'dark' ? 'bg-gradient-to-br from-purple-500 to-fuchsia-600' : 'bg-blue-100'}`}>
-                <Icon className={`w-8 h-8 ${theme === 'dark' ? 'text-white' : 'text-blue-600'}`} />
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg bg-blue-100">
+                <Icon className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className={`text-xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+              <h3 className="text-xl font-semibold mb-4 text-slate-900">
                 {feature.title}
               </h3>
-              <p className={`leading-relaxed ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+              <p className="leading-relaxed text-slate-600">
                 {feature.description}
               </p>
             </motion.div>

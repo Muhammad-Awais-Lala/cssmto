@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <!-- Prefer and advertise the color schemes we support so user agents won't auto-invert unexpectedly -->
-  <meta name="color-scheme" content="light dark" />
-  <!-- Explicitly set browser UI theme color; updated by ThemeContext and boot script -->
+  <!-- Light-only color scheme -->
+  <meta name="color-scheme" content="light" />
   <meta name="theme-color" content="#ffffff" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,34 +17,7 @@
 
 <body>
   <div id="root"></div>
-  <!-- Ensure the saved theme is applied immediately to the documentElement
-       so browsers won't apply their system forced dark/light before React mounts. -->
-  <script>
-    (function(){
-      try {
-        var t = localStorage.getItem('theme');
-        var themeColorMeta = document.querySelector('meta[name="theme-color"]');
-        var lightColor = '#ffffff';
-        var darkColor = '#0f172a';
-        if (t === 'dark') {
-          document.documentElement.classList.add('dark');
-          document.documentElement.setAttribute('data-theme', 'dark');
-          if (themeColorMeta) themeColorMeta.setAttribute('content', darkColor);
-        } else if (t === 'light') {
-          document.documentElement.classList.remove('dark');
-          document.documentElement.setAttribute('data-theme', 'light');
-          if (themeColorMeta) themeColorMeta.setAttribute('content', lightColor);
-        } else {
-          // default to light explicitly so system theme doesn't affect UI chrome
-          document.documentElement.classList.remove('dark');
-          document.documentElement.setAttribute('data-theme', 'light');
-          if (themeColorMeta) themeColorMeta.setAttribute('content', lightColor);
-        }
-      } catch (e) {
-        // ignore
-      }
-    })();
-  </script>
+  
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
