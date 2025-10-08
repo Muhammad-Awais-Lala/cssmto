@@ -92,8 +92,9 @@ export default function Navigation() {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">CSS</span>
               </div>
-              <span className="font-bold text-xl  dark:text-white">
-                CSS Prep
+              <span className="font-bold text-xl 
+               dark:text-white mr-2">
+                Preparation
               </span>
             </motion.div>
           </Link>

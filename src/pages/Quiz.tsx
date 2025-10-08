@@ -69,7 +69,7 @@ export default function Quiz() {
     setShowCorrectAnswers(false);
     
     try {
-      const { data } = await apiClient.post<MCQResponse>('/api/mcqs/generate-mcqs', {
+      const { data } = await apiClient.post<MCQResponse>('/api/generate-mcqs', {
         subject: subjectName,
         count: 15,
         difficulty: 'Medium',
