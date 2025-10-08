@@ -83,7 +83,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/home" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -92,7 +92,7 @@ export default function Navigation() {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">CSS</span>
               </div>
-              <span className="font-bold text-xl text-slate-900 dark:text-white">
+              <span className="font-bold text-xl  dark:text-white">
                 CSS Prep
               </span>
             </motion.div>

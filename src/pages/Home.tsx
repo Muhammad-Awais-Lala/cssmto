@@ -183,7 +183,7 @@ export default function Home() {
             />
             <div className="relative z-10 flex h-full flex-col">
               <BookOpen className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300" />
-              <h2 className="text-3xl font-bold mb-4 dark:text-white">MPT Preparation</h2>
+              <h2 className="text-3xl font-bold mb-4 ">MPT Preparation</h2>
               <p className="text-blue-100 mb-6 text-lg">
                 Start your <span className="font-semibold">MPT Preparation</span> with Pakistan-focused MCQs
                 and boost your chances to qualify for the CSS exam.
@@ -229,7 +229,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* --- WHAT IS CSS --- */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold dark:text-white mb-4">
+          <h2 className="text-4xl font-bold  mb-4">
             What is CSS ?
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
@@ -290,7 +290,7 @@ export default function Home() {
         {/* Header */}
 
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold dark:text-white mb-4">
+          <h2 className="text-4xl font-bold mb-4">
             What is MPT (MCQ Preliminary Test)?
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
@@ -414,7 +414,7 @@ export default function Home() {
         className="mb-20"
       >
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold dark:text-white mb-4">
+          <h2 className="text-4xl font-bold  mb-4">
             Complete CSS Exam Guide
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
@@ -613,7 +613,7 @@ export default function Home() {
 
 
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold dark:text-white mb-4">
+        <h2 className="text-4xl font-bold mb-4">
           Why Choose Our CSS Prep Platform?
         </h2>
         <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>

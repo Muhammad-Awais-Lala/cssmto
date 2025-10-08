@@ -207,7 +207,7 @@ export default function Quiz() {
       {showConfetti && <ConfettiAnimation />}
       
       <Breadcrumbs items={[
-        { label: 'Quiz', path: '/compulsory' },
+        { label: 'Quiz', path: '/mptpreparation' },
         { label: subjectName }
       ]} />
 
@@ -219,7 +219,7 @@ export default function Quiz() {
         {/* Header */}
         <div className="mb-8">
           <div className="sticky top-16 z-30 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between mb-4 py-3 px-1 -mx-1">
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold ">
               {subjectName}
             </h1>
             <CustomButton variant="outline" onClick={() => navigate(-1)}>
