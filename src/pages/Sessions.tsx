@@ -22,6 +22,7 @@ import {
   CustomAlertDialogAction,
   CustomAlertDialogCancel,
 } from '@/components/CustomAlertDialog';
+import { Helmet } from 'react-helmet-async';
 
 interface QuizResult {
   right: number[];
@@ -70,6 +71,13 @@ export default function Sessions() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumbs items={[{ label: 'Sessions' }]} />
+      <Helmet>
+        <title>Quiz Sessions | CSS Preparation</title>
+        <meta name="description" content="Review your past quiz sessions and track your progress." />
+        <meta property="og:title" content="Quiz Sessions | CSS Preparation" />
+        <meta property="og:description" content="Comprehensive overview of your quiz attempts." />
+        <meta property="og:type" content="website" /> 
+      </Helmet>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

@@ -6,6 +6,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import SubjectCard from '../components/SubjectCard';
 import { CustomButton } from '@/components/CustomButton';
 import { CustomModal } from '@/components/CustomModal';
+import { Helmet } from 'react-helmet-async';
 
 
 const mptSubjects = [
@@ -102,6 +103,13 @@ export default function MptPreparation() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumbs items={[{ label: 'MPT Preparation' }]} />
+      <Helmet>
+        <title>MPT Preparation | CSS Preparation</title>
+        <meta name="description" content="Prepare for the MPT exam with our comprehensive resources." />
+        <meta property="og:title" content="MPT Preparation | CSS Preparation" />
+        <meta property="og:description" content="Best resources for MPT exam preparation!" />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
       <div className="max-w-3xl mx-auto mb-12 text-center space-y-4">
 

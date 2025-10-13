@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { BookOpen, ClipboardList, CheckCircle, Layers, CircleCheck } from 'lucide-react';
 import { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
+import { Helmet } from 'react-helmet-async';
 
 export default function SubjectsGuide() {
   const guidePoints = [
@@ -62,6 +63,13 @@ export default function SubjectsGuide() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumbs items={[{ label: "CSS Subjects Guide" }]} />
+      <Helmet>
+        <title>CSS Subjects Guide | CSS Preparation</title>
+        <meta name="description" content="Explore the CSS subjects selection guide for effective exam preparation." />
+        <meta property="og:title" content="CSS Subjects Guide | CSS Preparation" />
+        <meta property="og:description" content="Comprehensive guide for CSS subjects selection." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="text-center mb-12">
         <h2 className={`text-4xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : ''}`}>
           CSS Subjects Selection Guide

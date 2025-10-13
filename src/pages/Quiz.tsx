@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, RotateCcw, CheckCircle, XCircle, Circle, Eye } from 'lucide-react';
 import { CustomButton } from '@/components/CustomButton';
 import { useCustomToast } from '@/hooks/useCustomToast';
@@ -204,6 +205,13 @@ export default function Quiz() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <Helmet>
+        <title>{subjectName ? `${subjectName} Quiz | EduApp` : 'Quiz | EduApp'}</title>
+        <meta
+          name="description"
+          content={subjectName ? `Take a ${subjectName} quiz to practice and assess your knowledge.` : 'Take a quiz to practice and assess your knowledge.'}
+        />
+      </Helmet>
       {showConfetti && <ConfettiAnimation />}
       
       <Breadcrumbs items={[
