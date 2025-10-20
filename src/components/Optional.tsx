@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 // import Breadcrumbs from '../components/Breadcrumbs';
 import SubjectCard from './SubjectCard';
 import { X, BookOpenCheck, Clock, LineChart, PieChart, Target } from "lucide-react";
 // import Compulsory from './Compulsory';
 
 import { optionalGroups } from '../data/optionalGroups';
+import { ThemeContext } from '@/contexts/ThemeContext';
 
 function GroupDetailsModal({ group, onClose }: { group: typeof optionalGroups[0], onClose: () => void }) {
   if (!group) return null;
@@ -96,6 +97,9 @@ export default function Optional() {
     setSelectedGroup(group);
   };
 
+  const themeContext = useContext(ThemeContext);
+  const theme = themeContext?.theme || 'light';
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* <Breadcrumbs items={[{ label: "Css Subjects Guide" }]} /> */}
@@ -111,7 +115,8 @@ export default function Optional() {
           Optional Subjects
         </h2>
         <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-        <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+        {/* <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto"> */}
+        <p className={`text-xl max-w-3xl mx-auto ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
           Choose from seven specialized groups covering diverse academic disciplines.
           Each group contains subjects with Pakistan-focused content and examples.
         </p>

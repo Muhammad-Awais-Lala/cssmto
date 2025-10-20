@@ -5,7 +5,8 @@ import { CustomButton } from '@/components/CustomButton';
 import { useTheme } from '../contexts/ThemeContext';
 import { motion } from 'framer-motion';
 import { CustomSheet, CustomSheetTrigger, CustomSheetContent, CustomSheetHeader, CustomSheetTitle } from '@/components/CustomSheet';
-
+// import navLogo from '../assets/navLogo.png';
+import navLogo from '../assets/logoTransparent.png';
 // Custom DropdownMenu implementation (for theme toggle)
 const CustomDropdownMenu = ({ children, trigger, onClose }: { children: React.ReactNode, trigger: React.ReactNode, onClose?: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,8 @@ const CustomDropdownMenu = ({ children, trigger, onClose }: { children: React.Re
       {isOpen && (
         <>
           {/* Backdrop to close dropdown when clicking outside */}
-          <div 
-            className="fixed inset-0 z-10" 
+          <div
+            className="fixed inset-0 z-10"
             onClick={handleClose}
           />
           <motion.div
@@ -89,22 +90,25 @@ export default function Navigation() {
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-2"
             >
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CSS</span>
-              </div>
-              <span className="font-bold text-xl 
-               dark:text-white mr-2">
-                Preparation
-              </span>
+              <img
+                src={navLogo}
+                alt="Logo"
+                className="w-24 h-24 object-contain" // Adjust size here
+              />
+              {/* Optional text next to logo */}
+              {/* <span className="font-bold text-xl dark:text-white mr-2">
+      Preparation
+    </span> */}
             </motion.div>
           </Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;
-              
+
               return (
                 <Link key={item.path} to={item.path}>
                   <motion.div
@@ -114,11 +118,10 @@ export default function Navigation() {
                     <CustomButton
                       variant={isActive ? "default" : "ghost"}
                       size="sm"
-                      className={`flex items-center space-x-2 ${
-                        isActive 
-                          ? 'bg-[var(--color-primary)] hover:bg-[var(--color-primary-600)] text-white' 
-                          : 'text-text-primary hover:bg-accent'
-                      }`}
+                      className={`flex items-center space-x-2 ${isActive
+                        ? 'bg-[var(--color-primary)] hover:bg-[var(--color-primary-600)] text-white'
+                        : 'text-text-primary hover:bg-accent'
+                        }`}
                     >
                       <Icon className="w-4 h-4" />
                       <span>{item.label}</span>
@@ -137,7 +140,7 @@ export default function Navigation() {
                   <ThemeIcon className="w-4 h-4" />
                 </CustomButton>
               }
-              onClose={() => {}}
+              onClose={() => { }}
             >
               <div className="py-1">
                 {themeOptions.map((option) => {
@@ -163,9 +166,9 @@ export default function Navigation() {
 
             {/* Mobile Menu Toggle Button */}
             <div className="md:hidden">
-              <CustomSheet 
-                open={isOpen} 
-                onOpenChange={setIsOpen} 
+              <CustomSheet
+                open={isOpen}
+                onOpenChange={setIsOpen}
                 side="top"
                 className="w-full h-auto max-h-[80vh] rounded-b-xl"
               >
@@ -212,11 +215,10 @@ export default function Navigation() {
                           >
                             <CustomButton
                               variant={isActive ? "default" : "ghost"}
-                              className={`w-full flex items-center justify-start rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600 border border-blue-100 dark:border-blue-800 ${
-                                isActive
-                                  ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg'
-                                  : 'bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-200 hover:bg-blue-50 dark:hover:bg-blue-800'
-                              }`}
+                              className={`w-full flex items-center justify-start rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600 border border-blue-100 dark:border-blue-800 ${isActive
+                                ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg'
+                                : 'bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-200 hover:bg-blue-50 dark:hover:bg-blue-800'
+                                }`}
                             >
                               <Icon className="w-5 h-5 mr-3" />
                               <span className="truncate">{item.label}</span>

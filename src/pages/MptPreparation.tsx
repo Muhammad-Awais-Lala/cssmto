@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, ChartBar, Languages, FileText, Brain, Globe, Star } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -7,6 +7,7 @@ import SubjectCard from '../components/SubjectCard';
 import { CustomButton } from '@/components/CustomButton';
 import { CustomModal } from '@/components/CustomModal';
 import { Helmet } from 'react-helmet-async';
+import { ThemeContext } from '@/contexts/ThemeContext';
 
 
 const mptSubjects = [
@@ -100,6 +101,9 @@ export default function MptPreparation() {
     navigate(`/quiz/${subject.slug}`);
   };
 
+  const themeContext = useContext(ThemeContext);
+  const theme = themeContext?.theme || 'light';
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumbs items={[{ label: 'MPT Preparation' }]} />
@@ -118,7 +122,9 @@ export default function MptPreparation() {
             What is MPT
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          {/* <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto"> */}
+          <p className={`text-xl max-w-3xl mx-auto ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+
             The <span className="font-semibold">MCQ Based Preliminary Test (MPT)</span>
             is a screening test conducted by FPSC for the CSS Examination.
             It helps shortlist candidates for the written CSS exam by testing
@@ -185,7 +191,9 @@ export default function MptPreparation() {
             MPT Preparation
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          {/* <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto"> */}
+          <p className={`text-xl max-w-3xl mx-auto ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+
             Pick a subject and we'll generate a practice MCQ quiz for you — timed, Pakistan-centric, and ready to review.
           </p>
         </div>

@@ -428,7 +428,9 @@ export default function Home() {
               Complete CSS Exam Guide
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            {/* <p className="text-xl text-slate-600 max-w-3xl mx-auto"> */}
+            <p className={`text-xl max-w-3xl mx-auto ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
+
               Everything you need to know about the CSS examination process, eligibility, and preparation strategy
             </p>
           </div>
@@ -473,7 +475,7 @@ export default function Home() {
                           <CustomCardTitle className="text-lg">{step.title}</CustomCardTitle>
                         </CustomCardHeader>
                         <CustomCardContent>
-                          <p className="text-slate-600 dark:text-slate-400">{step.description}</p>
+                          <p className={`${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>{step.description}</p>
                         </CustomCardContent>
                       </CustomCard>
                     </motion.div>
@@ -503,7 +505,7 @@ export default function Home() {
                           className="flex items-start space-x-3"
                         >
                           <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-slate-700 dark:text-slate-300">{subject}</span>
+                          <span className={`text-sm ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>{subject}</span>
                         </motion.li>
                       ))}
                     </ul>
@@ -529,7 +531,7 @@ export default function Home() {
                           className="flex items-start space-x-3"
                         >
                           <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-slate-700 dark:text-slate-300">{subject}</span>
+                          <span className={`text-sm ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>{subject}</span>
                         </motion.li>
                       ))}
                     </ul>
@@ -558,7 +560,7 @@ export default function Home() {
                         className="flex items-start space-x-3"
                       >
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-700 dark:text-slate-300">{requirement}</span>
+                        <span className={`text-sm ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>{requirement}</span>
                       </motion.li>
                     ))}
                   </ul>
@@ -573,7 +575,7 @@ export default function Home() {
                   </CustomCardTitle>
                 </CustomCardHeader>
                 <CustomCardContent>
-                  <div className="space-y-4 text-slate-700 dark:text-slate-300">
+                  <div className={`text-sm space-y-4 ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
                     <p><strong>Application Process:</strong> Online application through FPSC website during specified period</p>
                     <p><strong>Examination Pattern:</strong> Written examination followed by psychological assessment, medical examination, and interview</p>
                     <p><strong>Passing Criteria:</strong> Minimum 50% marks in aggregate and 40% in each compulsory subject</p>
@@ -627,7 +629,8 @@ export default function Home() {
             Why Choose Our CSS Prep Platform?
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          {/* <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto"> */}
+          <p className={`text-xl max-w-3xl mx-auto ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
             A complete preparation hub with subject guidance, smart quizzes, and detailed progress tracking
             designed to make your CSS journey structured and stress-free.</p>
         </div>

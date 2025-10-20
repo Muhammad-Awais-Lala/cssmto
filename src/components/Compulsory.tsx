@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { FileText, BookOpen, Lightbulb, Globe, Flag, Star } from 'lucide-react';
 import SubjectCard from './SubjectCard';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { CustomModal } from '@/components/CustomModal';
+import { ThemeContext } from '@/contexts/ThemeContext';
 const compulsorySubjects = [
   {
     name: 'English Essay',
@@ -92,6 +93,8 @@ export default function Compulsory() {
     setSelectedSubject(subject);
   };
 
+    const themeContext = useContext(ThemeContext);
+    const theme = themeContext?.theme || 'light';
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <motion.div
@@ -105,7 +108,7 @@ export default function Compulsory() {
             Compulsory Subjects
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className={`text-xl max-w-3xl mx-auto ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
             Select any subject card to view its syllabus, exam weightage, and study tips
           </p>
         </div>
