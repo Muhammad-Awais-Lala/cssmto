@@ -5,7 +5,7 @@ import { CustomButton } from '@/components/CustomButton';
 import { useTheme } from '../contexts/ThemeContext';
 import { motion } from 'framer-motion';
 import { CustomSheet, CustomSheetTrigger, CustomSheetContent, CustomSheetHeader, CustomSheetTitle } from '@/components/CustomSheet';
-// import navLogo from '../assets/navLogo.png';
+
 import navLogo from '../assets/logoTransparent.png';
 // Custom DropdownMenu implementation (for theme toggle)
 const CustomDropdownMenu = ({ children, trigger, onClose }: { children: React.ReactNode, trigger: React.ReactNode, onClose?: () => void }) => {
@@ -88,7 +88,7 @@ export default function Navigation() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-1"
             >
               <img
                 src={navLogo}
@@ -96,9 +96,9 @@ export default function Navigation() {
                 className="w-24 h-24 object-contain" // Adjust size here
               />
               {/* Optional text next to logo */}
-              {/* <span className="font-bold text-xl dark:text-white mr-2">
-      Preparation
-    </span> */}
+                <span className="font-bold text-xl dark:text-white mr-2">
+                CSS Preparation
+               </span>
             </motion.div>
           </Link>
 

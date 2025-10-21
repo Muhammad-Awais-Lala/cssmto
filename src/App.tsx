@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import './index.css';
 import MptPreparation from './pages/MptPreparation';
 import SubjectsGuide from './pages/SubjectsGuid';
+import { Helmet } from 'react-helmet-async';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -25,6 +26,12 @@ const queryClient = new QueryClient({
 
 function App() {
   return (
+    <>
+    <Helmet>
+      <title>CSS Preparation</title>
+      <meta name="description" content="Master the css journney from MPT to final exam. Your all-in-one platform for Pakistan’s CSS Exam." />
+      <link rel="icon" type="image/x-icon" href="/logoTransparent.png" />
+    </Helmet>
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <Router>
@@ -49,6 +56,7 @@ function App() {
         </Router>
       </ThemeProvider>
     </QueryClientProvider>
+    </>
   );
 }
 

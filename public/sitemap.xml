@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ==========================================
-     Sitemap - Generated for your React Website
-     ========================================== -->
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
@@ -24,10 +22,36 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Example dynamic quiz route -->
-  <url>
-    <loc>https://csspreparation.site/quiz/sample-subject</loc>
-    <priority>0.70</priority>
-  </url>
+  <!-- dynamic quiz route -->
+  <!-- Islamic Studies -->
+  <url><loc>https://csspreparation.site/quiz/quran-sunnah</loc></url>
+  <url><loc>https://csspreparation.site/quiz/islamic-history</loc></url>
+  <url><loc>https://csspreparation.site/quiz/fiqh</loc></url>
+
+  <!-- Urdu -->
+  <url><loc>https://csspreparation.site/quiz/urdu-grammar</loc></url>
+  <url><loc>https://csspreparation.site/quiz/urdu-translation</loc></url>
+
+  <!-- English -->
+  <url><loc>https://csspreparation.site/quiz/english-vocabulary</loc></url>
+  <url><loc>https://csspreparation.site/quiz/english-grammar</loc></url>
+  <url><loc>https://csspreparation.site/quiz/english-comprehension</loc></url>
+
+  <!-- General Knowledge -->
+  <url><loc>https://csspreparation.site/quiz/pakistan-studies</loc></url>
+  <url><loc>https://csspreparation.site/quiz/current-affairs</loc></url>
+  <url><loc>https://csspreparation.site/quiz/everyday-science</loc></url>
+
+  <!-- General Ability -->
+  <url><loc>https://csspreparation.site/quiz/basic-arithmetic</loc></url>
+  <url><loc>https://csspreparation.site/quiz/algebra</loc></url>
+  <url><loc>https://csspreparation.site/quiz/geometry</loc></url>
+  <url><loc>https://csspreparation.site/quiz/logical-reasoning</loc></url>
+  <url><loc>https://csspreparation.site/quiz/analytical-ability</loc></url>
+  <url><loc>https://csspreparation.site/quiz/mental-ability</loc></url>
+
+  <!-- Ethics -->
+  <url><loc>https://csspreparation.site/quiz/moral-philosophy</loc></url>
+  <url><loc>https://csspreparation.site/quiz/comparative-religion</loc></url>
 
 </urlset>

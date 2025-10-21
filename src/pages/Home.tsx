@@ -101,10 +101,11 @@ export default function Home() {
     <>
       <Helmet>
         <title>Home | CSS Preparation</title>
-        <meta name="description" content="Welcome to my React app home page" />
+        <meta name="description" content="Master the css journney from MPT to final exam. Your all-in-one platform for Pakistan’s CSS Exam." />
         <meta property="og:title" content="My React App Home" />
         <meta property="og:description" content="Best React app ever!" />
         <meta property="og:type" content="website" />
+        <link rel="icon" type="image/x-icon" href="/logoTransparent.png" />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
