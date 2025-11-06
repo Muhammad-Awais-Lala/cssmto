@@ -360,26 +360,26 @@ export default function Home() {
               <ul className={`grid sm:grid-cols-2 gap-2 text-sm md:text-base ${theme === 'dark' ? 'text-indigo-100' : 'text-slate-600'}`}>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  Islamic Studies / Ethics
+                  Islamic Studies / Ethics (20 Marks)
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  Urdu
+                  Urdu (20 Marks)
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  English
+                  English (50 Marks)
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  General Knowledge
+                  General Knowledge (50 Marks)
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  General Ability
+                  General Ability (60 Marks)
                 </li>
                 {/* <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                
                 Pakistan Studies & Current Affairs
               </li> */}
               </ul>

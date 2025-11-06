@@ -17,6 +17,7 @@ const mptSubjects = [
     icon: BookOpen,
     description: 'Islamic history, Quran, Sunnah and Fiqh',
     gradient: 'from-green-500 to-green-600',
+    marks: 20,
     subjects: [
       { name: 'Quran & Sunnah', slug: 'quran-sunnah' },
       { name: 'Islamic History', slug: 'islamic-history' },
@@ -29,6 +30,7 @@ const mptSubjects = [
     icon: Languages,
     description: 'Urdu comprehension and language structure',
     gradient: 'from-orange-500 to-orange-600',
+    marks: 20,
     subjects: [
       { name: 'Grammar', slug: 'urdu-grammar' },
       { name: 'Translation', slug: 'urdu-translation' },
@@ -37,10 +39,11 @@ const mptSubjects = [
   },
   {
     name: 'English',
-    title: 'English (Vocabulary, Grammar, Comprehension)',
+    title: 'English',
     icon: FileText,
-    description: 'English comprehension, writing and grammar skills',
+    description: '(Vocabulary, Grammar, Comprehension) English comprehension, writing and grammar skills',
     gradient: 'from-blue-500 to-blue-600',
+    marks: 50,
     subjects: [
       { name: 'Vocabulary', slug: 'english-vocabulary' },
       { name: 'Grammar', slug: 'english-grammar' },
@@ -53,6 +56,7 @@ const mptSubjects = [
     icon: Globe,
     description: 'Everyday science, Pakistan studies, current affairs',
     gradient: 'from-purple-500 to-purple-600',
+    marks: 50,
     subjects: [
       { name: 'Pakistan Studies', slug: 'pakistan-studies' },
       { name: 'Current Affairs', slug: 'current-affairs' },
@@ -65,6 +69,7 @@ const mptSubjects = [
     icon: Brain,
     description: 'Arithmetic, Algebra, Geometry, Logic & Mental Ability',
     gradient: 'from-red-500 to-red-600',
+    marks: 60,
     subjects: [
       { name: 'Basic Arithmetic', slug: 'basic-arithmetic' },
       { name: 'Algebra', slug: 'algebra' },
@@ -81,6 +86,7 @@ const mptSubjects = [
     icon: Star,
     description: 'Ethics and comparative religion',
     gradient: 'from-teal-500 to-teal-600',
+    marks: 20,
     subjects: [
       { name: 'Moral Philosophy', slug: 'moral-philosophy' },
       { name: 'Comparative Religion', slug: 'comparative-religion' },
@@ -159,11 +165,11 @@ export default function MptPreparation() {
               <p className="font-semibold text-white text-lg">Subjects Covered</p>
             </div>
             <ul className="list-disc pl-6 text-white/90 space-y-2 text-sm">
-              <li>Islamic Studies / Ethics</li>
-              <li>Urdu</li>
-              <li>English</li>
-              <li>General Knowledge</li>
-              <li>General Ability</li>
+              <li>Islamic Studies / Ethics (20 Marks)</li>
+              <li>Urdu (20 Marks)</li>
+              <li>English (50 Marks)</li>
+              <li>General Knowledge (50 Marks)</li>
+              <li>General Ability (60 Marks)</li>
               {/* <li>Pakistan Studies & Current Affairs</li> */}
             </ul>
           </div>
@@ -215,6 +221,7 @@ export default function MptPreparation() {
                 gradient={group.gradient}
                 onClick={() => handleGroupClick(group)}
                 className="h-full"
+                marks={group.marks}
               />
             </motion.div>
           ))}
@@ -231,6 +238,9 @@ export default function MptPreparation() {
         <div className="space-y-3">
           <p className="text-center text-slate-600 dark:text-slate-400 mb-6">
             {selectedGroup?.description}
+          </p>
+          <p className="text-center text-sm text-slate-500 dark:text-slate-500 mb-6">
+            Total Marks: {selectedGroup?.marks}
           </p>
           <p className="text-center text-sm text-slate-500 dark:text-slate-500 mb-6">
             Select a section to start practicing:

@@ -4,54 +4,96 @@
 
   <url>
     <loc>https://csspreparation.site/</loc>
+    <lastmod>2025-10-20</lastmod>
     <priority>1.00</priority>
   </url>
 
   <url>
     <loc>https://csspreparation.site/mptpreparation</loc>
+    <lastmod>2025-10-20</lastmod>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://csspreparation.site/guide</loc>
+    <lastmod>2025-10-20</lastmod>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://csspreparation.site/sessions</loc>
+    <lastmod>2025-10-20</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- dynamic quiz route -->
   <!-- Islamic Studies -->
-  <url><loc>https://csspreparation.site/quiz/quran-sunnah</loc></url>
-  <url><loc>https://csspreparation.site/quiz/islamic-history</loc></url>
-  <url><loc>https://csspreparation.site/quiz/fiqh</loc></url>
+  <url>
+    <loc>https://csspreparation.site/quiz/quran-sunnah</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/islamic-history</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/fiqh</loc>
+  </url>
 
   <!-- Urdu -->
-  <url><loc>https://csspreparation.site/quiz/urdu-grammar</loc></url>
-  <url><loc>https://csspreparation.site/quiz/urdu-translation</loc></url>
+  <url>
+    <loc>https://csspreparation.site/quiz/urdu-grammar</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/urdu-translation</loc>
+  </url>
 
   <!-- English -->
-  <url><loc>https://csspreparation.site/quiz/english-vocabulary</loc></url>
-  <url><loc>https://csspreparation.site/quiz/english-grammar</loc></url>
-  <url><loc>https://csspreparation.site/quiz/english-comprehension</loc></url>
+  <url>
+    <loc>https://csspreparation.site/quiz/english-vocabulary</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/english-grammar</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/english-comprehension</loc>
+  </url>
 
   <!-- General Knowledge -->
-  <url><loc>https://csspreparation.site/quiz/pakistan-studies</loc></url>
-  <url><loc>https://csspreparation.site/quiz/current-affairs</loc></url>
-  <url><loc>https://csspreparation.site/quiz/everyday-science</loc></url>
+  <url>
+    <loc>https://csspreparation.site/quiz/pakistan-studies</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/current-affairs</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/everyday-science</loc>
+  </url>
 
   <!-- General Ability -->
-  <url><loc>https://csspreparation.site/quiz/basic-arithmetic</loc></url>
-  <url><loc>https://csspreparation.site/quiz/algebra</loc></url>
-  <url><loc>https://csspreparation.site/quiz/geometry</loc></url>
-  <url><loc>https://csspreparation.site/quiz/logical-reasoning</loc></url>
-  <url><loc>https://csspreparation.site/quiz/analytical-ability</loc></url>
-  <url><loc>https://csspreparation.site/quiz/mental-ability</loc></url>
+  <url>
+    <loc>https://csspreparation.site/quiz/basic-arithmetic</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/algebra</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/geometry</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/logical-reasoning</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/analytical-ability</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/mental-ability</loc>
+  </url>
 
   <!-- Ethics -->
-  <url><loc>https://csspreparation.site/quiz/moral-philosophy</loc></url>
-  <url><loc>https://csspreparation.site/quiz/comparative-religion</loc></url>
+  <url>
+    <loc>https://csspreparation.site/quiz/moral-philosophy</loc>
+  </url>
+  <url>
+    <loc>https://csspreparation.site/quiz/comparative-religion</loc>
+  </url>
 
 </urlset>
