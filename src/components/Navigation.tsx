@@ -44,7 +44,8 @@ const CustomDropdownMenu = ({ children, trigger, onClose }: { children: React.Re
 
 const navItems = [
   { path: '/', label: 'Home', icon: Home },
-  { path: '/mptpreparation', label: 'MPT Preparation', icon: BookOpen },
+  { path: '/mptpreparation', label: ' CSS MPT Preparation', icon: BookOpen },
+  { path: '/pmsgkprepration', label: ' PMS GK Preparation', icon: BookOpen },
   { path: '/guide', label: 'CSS Subjects Guide', icon: Layers },
   { path: '/sessions', label: 'Sessions', icon: Clock },
   // { path: '/settings', label: 'Settings', icon: Settings },
@@ -104,7 +105,7 @@ export default function Navigation() {
 
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-3">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;

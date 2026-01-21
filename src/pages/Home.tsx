@@ -126,7 +126,7 @@ export default function Home() {
             <h1 className="text-3xl md:text-5xl font-bold  mb-6 text-text-primary leading-tight">
               Master the{' '}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                CSS Journey <br /> MPT to Final Exam
+                CSS / PMS Journey <br /> MPT to Final Exam
               </span>
             </h1>
 
@@ -146,7 +146,7 @@ export default function Home() {
           </motion.p>
 
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -171,10 +171,104 @@ export default function Home() {
               </CustomButton>
             </Link>
           </motion.div>
+
+           <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center mt-7"
+          >
+            <Link to="/pmsgkprepration">
+              <CustomButton
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                Start Practicing PMS
+                <ArrowRight className="w-6 h-6 ml-3" />
+              </CustomButton>
+            </Link>
+            <Link to="/guide">
+              <CustomButton
+                variant="outline"
+                size="lg"
+                className="px-10 py-4 text-lg border-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
+              >
+                Explore PMS Subjects
+              </CustomButton>
+            </Link>
+          </motion.div> */}
+
+          <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+  className="flex flex-col sm:flex-row gap-6 justify-center"
+>
+  {/* MPT Button */}
+  <Link to="/mptpreparation">
+    <CustomButton
+      size="lg"
+      className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 group"
+    >
+      <div className="flex items-center">
+        <BookOpen className="w-5 h-5 mr-2" />
+        Start MPT
+        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+      </div>
+    </CustomButton>
+  </Link>
+  
+  {/* PMS Button */}
+  <Link to="/pmsgkprepration">
+    <CustomButton
+      size="lg"
+      className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 group"
+    >
+      <div className="flex items-center">
+        <BookOpen className="w-5 h-5 mr-2" />
+        Start PMS
+        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+      </div>
+    </CustomButton>
+  </Link>
+  
+  {/* CSS Guide Button */}
+  <Link to="/guide">
+    <CustomButton
+      variant="outline"
+      size="lg"
+      className="px-8 py-4 text-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-all duration-300"
+    >
+      <div className="flex items-center">
+        <Layers className="w-5 h-5 mr-2" />
+        CSS Guide
+      </div>
+    </CustomButton>
+  </Link>
+  
+  {/* PMS Guide Button */}
+  <Link to="/guide">
+    <CustomButton
+      variant="outline"
+      size="lg"
+      className="px-8 py-4 text-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-all duration-300"
+    >
+      <div className="flex items-center">
+        <Layers className="w-5 h-5 mr-2" />
+        PMS Guide
+      </div>
+    </CustomButton>
+  </Link>
+</motion.div>
+
+
         </motion.div>
 
+
+        
+
         {/* Main Cards */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -221,7 +315,7 @@ export default function Home() {
               />
               <div className="relative z-10 flex h-full flex-col">
                 <Layers className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300" />
-                <h2 className="text-3xl font-bold mb-4 dark:text-white">CSS Subjects Guide</h2>
+                <h2 className="text-3xl font-bold mb-4 dark:text-white">CSS MPT Subjects Guide</h2>
                 <p className="text-purple-100 mb-6 text-lg">
                   Explore compulsory and optional subjects with detailed marks distribution and guidance
                   for effective CSS exam preparation.
@@ -235,6 +329,223 @@ export default function Home() {
             </motion.div>
           </Link>
         </motion.div>
+
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="grid md:grid-cols-2 gap-8 mb-12"
+        >
+          <Link to="/pmsgkprepration" className="contents">
+            <motion.div
+              whileHover={{ scale: 1.03, y: -8 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 p-10 text-white shadow-2xl cursor-pointer group h-full min-h-[320px]"
+            >
+              <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+              <motion.div
+                className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
+              <div className="relative z-10 flex h-full flex-col">
+                <BookOpen className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h2 className="text-3xl font-bold mb-4 ">PMS Preparation</h2>
+                <p className="text-blue-100 mb-6 text-lg">
+                  Start your <span className="font-semibold">PMS Preparation</span> with Pakistan-focused MCQs
+                  and boost your chances to qualify for the CSS exam.
+                </p>
+                <div className="mt-auto flex items-center text-blue-100 group-hover:text-white transition-colors">
+                  <span className="text-lg font-medium">Start Practicing</span>
+                  <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+                </div>
+              </div>
+            </motion.div>
+          </Link>
+
+          <Link to="/guide" className="contents">
+            <motion.div
+              whileHover={{ scale: 1.03, y: -8 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-500 via-purple-600 to-pink-700 p-10 text-white shadow-2xl cursor-pointer group h-full min-h-[320px]"
+            >
+              <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+              <motion.div
+                className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full"
+                animate={{ rotate: -360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+              />
+              <div className="relative z-10 flex h-full flex-col">
+                <Layers className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h2 className="text-3xl font-bold mb-4 dark:text-white">PMS GK Subjects Guide</h2>
+                <p className="text-purple-100 mb-6 text-lg">
+                  Explore compulsory and optional subjects with detailed marks distribution and guidance
+                  for effective CSS exam preparation.
+                </p>
+
+                <div className="mt-auto flex items-center text-purple-100 group-hover:text-white transition-colors">
+                  <span className="text-lg font-medium">Explore Groups</span>
+                  <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+                </div>
+              </div>
+            </motion.div>
+          </Link>
+        </motion.div> */}
+
+                {/* Main Cards - 4 in One Line */}
+       <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.8 }}
+  className="grid md:grid-cols-4 gap-6 mb-16"
+>
+  {/* MPT Card */}
+  <Link to="/mptpreparation" className="contents">
+    <motion.div
+      whileHover={{ scale: 1.03, y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 text-white shadow-xl cursor-pointer group h-full min-h-[280px]"
+    >
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+      <motion.div
+        className="absolute -top-6 -right-6 w-28 h-28 bg-white/10 rounded-full"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      />
+      <div className="relative z-10 p-6 flex h-full flex-col">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="p-2 rounded-lg bg-white/20">
+            <BookOpen className="w-7 h-7" />
+          </div>
+          <div>
+            <h2 className="text-xl font-bold">MPT Preparation</h2>
+            <p className="text-blue-100 text-xs mt-1">CSS Screening</p>
+          </div>
+        </div>
+        <p className="text-blue-100 mb-4 text-sm leading-relaxed flex-grow">
+          Start your MPT Preparation with Pakistan-focused MCQs to qualify for CSS exam.
+        </p>
+        <div className="mt-auto flex items-center text-blue-100 group-hover:text-white transition-colors">
+          <span className="text-sm font-medium">Start Practicing</span>
+          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+        </div>
+      </div>
+    </motion.div>
+  </Link>
+
+  {/* PMS Card */}
+  <Link to="/pmsgkprepration" className="contents">
+    <motion.div
+      whileHover={{ scale: 1.03, y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 via-purple-600 to-pink-700 text-white shadow-xl cursor-pointer group h-full min-h-[280px]"
+    >
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+      <motion.div
+        className="absolute -bottom-6 -left-6 w-28 h-28 bg-white/10 rounded-full"
+        animate={{ rotate: -360 }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+      />
+      <div className="relative z-10 p-6 flex h-full flex-col">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="p-2 rounded-lg bg-white/20">
+            <BookOpen className="w-7 h-7" />
+          </div>
+          <div>
+            <h2 className="text-xl font-bold">PMS Preparation</h2>
+            <p className="text-purple-100 text-xs mt-1">Provincial Service</p>
+          </div>
+        </div>
+        <p className="text-purple-100 mb-4 text-sm leading-relaxed flex-grow">
+          Prepare for PMS General Knowledge with comprehensive MCQs for provincial civil services.
+        </p>
+        <div className="mt-auto flex items-center text-purple-100 group-hover:text-white transition-colors">
+          <span className="text-sm font-medium">Start Practicing</span>
+          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+        </div>
+      </div>
+    </motion.div>
+  </Link>
+
+  {/* CSS Subjects Guide Card */}
+  <Link to="/guide" className="contents">
+    <motion.div
+      whileHover={{ scale: 1.03, y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 text-white shadow-xl cursor-pointer group h-full min-h-[280px]"
+    >
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+      <motion.div
+        className="absolute -top-6 -right-6 w-28 h-28 bg-white/10 rounded-full"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      />
+      <motion.div
+        className="absolute -bottom-6 -left-6 w-28 h-28 bg-white/10 rounded-full"
+        animate={{ rotate: -360 }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+      />
+      <div className="relative z-10 p-6 flex h-full flex-col">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="p-2 rounded-lg bg-white/20">
+            <Layers className="w-7 h-7" />
+          </div>
+          <div>
+            <h2 className="text-xl font-bold">CSS Subjects Guide</h2>
+            <p className="text-blue-100 text-xs mt-1">Complete Guide</p>
+          </div>
+        </div>
+        <p className="text-blue-100 mb-4 text-sm leading-relaxed flex-grow">
+          Explore CSS subjects with detailed syllabus, marks distribution and preparation strategies.
+        </p>
+        <div className="mt-auto flex items-center text-blue-100 group-hover:text-white transition-colors">
+          <span className="text-sm font-medium">Explore Guide</span>
+          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+        </div>
+      </div>
+    </motion.div>
+  </Link>
+
+  {/* PMS Subjects Guide Card */}
+  <Link to="/guide" className="contents">
+    <motion.div
+      whileHover={{ scale: 1.03, y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 via-purple-600 to-pink-700 text-white shadow-xl cursor-pointer group h-full min-h-[280px]"
+    >
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+      <motion.div
+        className="absolute -top-6 -right-6 w-28 h-28 bg-white/10 rounded-full"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      />
+      <div className="relative z-10 p-6 flex h-full flex-col">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="p-2 rounded-lg bg-white/20">
+            <Layers className="w-7 h-7" />
+          </div>
+          <div>
+            <h2 className="text-xl font-bold">PMS Subjects Guide</h2>
+            <p className="text-purple-100 text-xs mt-1">Complete Guide</p>
+          </div>
+        </div>
+        <p className="text-purple-100 mb-4 text-sm leading-relaxed flex-grow">
+          Explore PMS subjects with detailed syllabus and preparation strategies for provincial services.
+        </p>
+        <div className="mt-auto flex items-center text-purple-100 group-hover:text-white transition-colors">
+          <span className="text-sm font-medium">Explore Guide</span>
+          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+        </div>
+      </div>
+    </motion.div>
+  </Link>
+</motion.div>
+
+
+
+
+        
         {/*//////////////////// info //////////// */}
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -744,6 +1055,9 @@ export default function Home() {
           })}
         </motion.div>
       </div>
+
+
+      
     </>
   );
 }

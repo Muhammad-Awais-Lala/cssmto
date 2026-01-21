@@ -12,6 +12,7 @@ import CustomToastProvider from './components/CustomToastProvider';
 import Footer from './components/Footer';
 import './index.css';
 import MptPreparation from './pages/MptPreparation';
+import PmsgkPrepration from './pages/PmsgkPreparation';
 import SubjectsGuide from './pages/SubjectsGuid';
 import { Helmet } from 'react-helmet-async';
 
@@ -43,6 +44,7 @@ function App() {
                 {/* <Route path="/home" element={<Home />} /> */}
             
                 <Route path ='/mptpreparation' element={<MptPreparation/>} />
+                <Route path ='/pmsgkprepration' element={<PmsgkPrepration/>} />
                 <Route path="/guide" element={<SubjectsGuide />} />
                 <Route path="/quiz/:subjectSlug" element={<Quiz />} />
                 <Route path="/sessions" element={<Sessions />} />
