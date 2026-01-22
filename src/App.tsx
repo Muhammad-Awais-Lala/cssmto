@@ -14,6 +14,7 @@ import './index.css';
 import MptPreparation from './pages/MptPreparation';
 import PmsgkPrepration from './pages/PmsgkPreparation';
 import SubjectsGuide from './pages/SubjectsGuid';
+import PMSSubjectGuide from './pages/PmsSubjectguide';
 import { Helmet } from 'react-helmet-async';
 
 const queryClient = new QueryClient({
@@ -46,6 +47,7 @@ function App() {
                 <Route path ='/mptpreparation' element={<MptPreparation/>} />
                 <Route path ='/pmsgkprepration' element={<PmsgkPrepration/>} />
                 <Route path="/guide" element={<SubjectsGuide />} />
+                <Route path="/pmsguide" element={<PMSSubjectGuide />} />
                 <Route path="/quiz/:subjectSlug" element={<Quiz />} />
                 <Route path="/sessions" element={<Sessions />} />
                 {/* <Route path="/settings" element={<Settings />} /> */}

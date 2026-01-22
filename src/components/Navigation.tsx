@@ -47,6 +47,7 @@ const navItems = [
   { path: '/mptpreparation', label: ' CSS MPT Preparation', icon: BookOpen },
   { path: '/pmsgkprepration', label: ' PMS GK Preparation', icon: BookOpen },
   { path: '/guide', label: 'CSS Subjects Guide', icon: Layers },
+  { path: '/pmsguide', label: 'PMS Subjects Guide', icon: Layers },
   { path: '/sessions', label: 'Sessions', icon: Clock },
   // { path: '/settings', label: 'Settings', icon: Settings },
 ];
